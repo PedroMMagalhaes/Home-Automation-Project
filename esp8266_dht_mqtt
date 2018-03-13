@@ -12,8 +12,8 @@
 #include <PubSubClient.h>
 #include "DHT.h"          // Library for DHT sensors
 
-#define wifi_ssid "CASA_MAG"
-#define wifi_password "#CASA-COM#"
+#define wifi_ssid "WIFI SSID"
+#define wifi_password "WIFI PASSWORD"
  
 #define mqtt_server "10.1.1.20"
 #define mqtt_user "teste"      // if exist user
