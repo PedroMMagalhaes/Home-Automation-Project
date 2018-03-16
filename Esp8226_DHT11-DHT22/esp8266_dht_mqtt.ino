@@ -42,7 +42,7 @@ PubSubClient client(espClient);
  
 void setup() {
   Serial.begin(9600);     
-  pinMode(D2,OUTPUT);     //Pin 2 for LED
+  
   setup_wifi();           //Connect to Wifi network
   client.setServer(mqtt_server, 1883);    // Configure MQTT connection
   client.setCallback(callback);           // callback function ( MQTT message )   
