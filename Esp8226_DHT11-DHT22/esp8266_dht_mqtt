@@ -29,7 +29,7 @@ long lastMsg = 0;
 long lastRecu = 0;
 bool debug = false;  //Display log message if  = True
  
-#define DHTPIN 5    // DHT Pin 
+#define DHTPIN 14    // DHT Pin 
  
 // Type of sensor
   #define DHTTYPE DHT11       // DHT 11 
