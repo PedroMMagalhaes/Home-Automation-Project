@@ -11,12 +11,12 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-#define wifi_ssid "CASA_MAG"
-#define wifi_password "#CASA-COM#"
+#define wifi_ssid "XXXXX"
+#define wifi_password "XXXXXX"
 
-#define mqtt_server "10.1.1.4"
-#define mqtt_user "teste"      // if exist user
-#define mqtt_password "teste"  // password
+#define mqtt_server "XXXXX"
+#define mqtt_user "XXXXX"      // if exist user
+#define mqtt_password "XXXX"  // password
 
 #define movement_topic "sensor/movement" 
 
@@ -108,7 +108,7 @@ void loop() {
      mov = movement();
     Serial.println(mov);
     
-    client.publish(movement_topic, String(mov).c_str(), true);      // Publish rainstatus (its not necessary conversion to string , but in case of spaces is required)
+    client.publish(movement_topic, String(mov).c_str(), true);      // Publish Movement status (its not necessary conversion to string , but in case of spaces is required)
   }
   if (now - lastRecu > 100 ) {
     lastRecu = now;
