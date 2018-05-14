@@ -70,7 +70,7 @@ void setup_wifi() {
 
 }
 
-//Reconnexion
+//Reconnect
 void reconnect() {
 
   while (!client.connected()) {
