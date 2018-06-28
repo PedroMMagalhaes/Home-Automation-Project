@@ -214,7 +214,7 @@ void soloHumiditySensor()
 
   // nothing to send
   HumidityPercentualRead = DoReadHumidity();
-  HumidityFinal = (int)HumidityPercentualRead; //trunca umidade como número inteiro
+  HumidityFinal = (int)HumidityPercentualRead; //
   Serial.println(HumidityFinal);
 
   if (debug)
@@ -236,20 +236,9 @@ float DoReadHumidity(void)
   Serial.print("[ ADC - testar valor de entrada] ");
   Serial.println(ValueADC);
 
-  //Quanto maior o numero lido do ADC, menor a umidade.
-  //Sendo assim, calcula-se a porcentagem de umidade por:
-  //
-  //   Valor lido                 Umidade percentual
-  //      _    0                           _ 100
-  //      |                                |
-  //      |                                |
-  //      -   ValueADC                     - Humidity
-  //      |                                |
-  //      |                                |
-  //     _|_  978                         _|_ 0
-  //
+  
   //   (Humidity-0) / (100-0)  =  (ValueADC - 978) / (-978)
-  //      Logo:
+  //      
   //      Humidity = 100 * ((978-ValueADC) / 978)
 
   Humidity = 100 * ((978 - (float)ValueADC) / 978);
